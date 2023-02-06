@@ -1,0 +1,109 @@
+
+@keyframes slideInLeft {
+    from{
+        transform: translateX(-1100px);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+
+body{
+  margin:0;  
+  background-color: #606060;
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+    main{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 5%;
+    }
+    
+    /*impostiamo lo sfondo della calcolatrice o almeno quello che dovrebbe essere il suo aspetto */
+    .calcolatrice{
+        background-color:  hsl(202, 11%, 29%);
+        border-radius: 30px;
+        padding-bottom: 30px;
+        padding-top:30px;
+        width: 350px;
+        animation-name: slideInLeft;
+        animation-duration: 1s;
+        animation-timing-function: ease-in;
+
+    }
+    /*creaimo una specie di riquadro bianco per il display del risultato */
+    .risultato{
+        height: 100px;
+        width: 300px;
+        background-color:  hsl(210, 25%, 95%);
+        color: hsl(202, 11%, 29%);
+        border-radius:30px;
+        margin-bottom: 30px;
+        margin-left: 25px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+p{
+    margin-right: 20px;
+    font-size: 30px;
+}
+
+button{
+    border: none;
+    background-color: hsl(210, 25%, 95%);
+    padding: 20px;
+    font-size: 20px;
+    border-radius: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/*per impostare il comportamento dei box quando ci passiamo sopra col il mouse */ 
+button:hover{
+    color: 	#F5F5F5;
+    cursor: pointer;
+}
+
+/* fa l'effetto cliccato classico di un bottone */ 
+button:active {
+    transform: scale(0.85);
+}
+
+.numeri{
+    height: 40px;
+    width: 40px;
+    background-color: hsl(210, 25%, 95%);
+    border-radius: 20px;
+    padding: 10px;
+    /* servono per centrare il contenuto della scatole, che sarebbero i vari button */ 
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.uguale{
+    background-color: hsl(357, 100%, 72%);
+}
+.operandi{
+    background-color: hsl(207, 19%, 61%);
+}
+
+#operandi{
+    background-color: hsl(207, 19%, 61%);
+}
+
+#uguale{
+    background-color: hsl(357, 100%, 72%);
+}
+
+.comandi{
+    padding: 5px;
+    width: 270px;
+    margin-left: 15px;
+    margin-left: 50px;
+}
+
+

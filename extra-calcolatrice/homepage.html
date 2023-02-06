@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Calcolatrice </title>
+        <link rel="icon" href="img/calcolatrice.png" type="image/png"> 
+        <link rel="stylesheet" type="text/css" href="stile.css">
+        <script src="funzionamento.js"> </script>
+    </head>
+
+    <body>
+        <main>
+            <!-- sfondo della calcolatrice -->
+            <div class="calcolatrice">
+                <!-- sfondo della schermata del risultato -->
+                <div class="risultato">
+                    <p id="ris"> </p> <!-- impostando come id "ris" sarà più facile andare a scrivere dentro a quel p-->
+                </div>
+            <!-- contenitore con all'interno tutta la tastiera della calcolatrice  --> 
+            <div class="comandi"> 
+            <!-- definiamo la prima riga di comandi -->
+            <div class="primaRiga">
+                <div class="numeri operandi" > <button id="operandi" onclick="cancella()"> C </button> </div> <!-- C cioè canc funziona in modo particolare, in quanto cancella tutto ciò che c'era scritto prima -->
+                <div class="numeri operandi" > <button id="operandi" value="%" onclick="perc()"> % </button> </div> <!-- perc possiamo impostarlo come funzione a parte tanto ha bisogno di un solo valore per funzionare-->
+                <div class="numeri operandi" > <button id="operandi" value="/" onclick="display('/')"> / </button> </div> <!-- con display richiamiamo tale funzione e le passiamo il valore che mettiamo tra parentesi -->
+            </div>
+            <br>
+            <!-- definiamo la seconda riga di comandi -->
+            <div class="secondaRiga">
+                <div class="numeri" id="7">  <button id="sette" value="7" onclick="display(7)"> 7 </button></div>
+                <div class="numeri" id="8"> <button id="otto" value="8" onclick="display(8)"> 8 </button> </div>
+                <div class="numeri" id="9"> <button id="nove" value="9" onclick="display(9)"> 9 </button> </div>
+                <div class="numeri operandi" id="X"> <button id="operandi" value="X" onclick="display('*')"> X </button> </div>
+            </div>
+            <br>
+            <!-- definiamo la terza riga di comandi -->
+            <div class="terzaRiga">
+                <div class="numeri" id="4"> <button id="quattro" value="4" onclick="display(4)"> 4 </button> </div>
+                <div class="numeri" id="5"> <button id="cinque" value="5" onclick="display(5)"> 5 </button> </div>
+                <div class="numeri" id="6"> <button id="sei" value="6" onclick="display(6)"> 6 </button> </div>
+                <div class="numeri operandi" id="+"> <button id="operandi" value="+" onclick="display('+')"> + </button> </div>
+            </div>
+            <br>
+            <!-- definiamo la quarta riga di comandi -->
+            <div class="quartaRiga">
+                <div class="numeri" id="1"> <button id="uno" value="1" onclick="display(1)">  1 </button> </div>
+                <div class="numeri" id="2"> <button id="due" value="2" onclick="display(2)"> 2 </button> </div>
+                <div class="numeri" id="3"> <button id="tre" value="3" onclick="display(3)"> 3 </button> </div>
+                <div class="numeri operandi" id="-"> <button id="operandi" value="-" onclick="display('-')"> - </button> </div>
+            </div>
+            <br>
+            <!-- definiamo la quinta riga di comandi -->
+            <div class="quintaRiga">
+                <div class="numeri" id="0"> <button id="zero" value="0" onclick="display(0)"> 0 </button> </div>
+                <div class="numeri" id="."> <button id="virgola" value="." onclick="display('.')"> . </button> </div>
+                <div class="numeri uguale" id="="> <button id="uguale" value="=" onclick="solve()"> = </button> </div> <!-- una volta che clicchiamo sull'uguale ci calcola ciò che abbiamo scritto dentro il display -->
+            </div>
+            </div>
+
+
+            </div>
+        
+        </main>
+        
+    </body>
+</html>
